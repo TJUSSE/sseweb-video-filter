@@ -11,8 +11,12 @@
 ========= 使用方法 =========
 
 [video:url]
-例如：
+基本用法：
 [video:http://v.youku.com/v_show/id_XMTM0OTIyNzkyNA==.html?from=y1.7-1.2]
+设置长宽：
+[video:http://v.youku.com/v_show/id_XMTM0OTIyNzkyNA==.html?from=y1.7-1.2 width:800 height:600]
+设置画面比：
+[video:http://v.youku.com/v_show/id_XMTM0OTIyNzkyNA==.html?from=y1.7-1.2 width:800 height:600 ratio:4/3]
 
 
 ========= 备注 =========
