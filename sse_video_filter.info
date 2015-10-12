@@ -1,0 +1,5 @@
+name = SSE Video Filter
+description = Filter to include videos from Youku and Tudou.
+core = 7.x
+version = 7.x-0.1
+package = SSE
