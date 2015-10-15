@@ -6,7 +6,7 @@
 function sse_video_filter_filter_info() {
   $filters = array();
   $filters['sse_video_filter'] = array(
-    'title' => t('Video Filter'),
+    'title' => t('优酷土豆视频过滤'),
     'description' => t('将 [video:URL] 替换成嵌入的视频'),
     'process callback' => '_sse_video_filter_process',
     'settings callback' => '_sse_video_filter_settings',
@@ -25,13 +25,13 @@ function _sse_video_filter_settings($form, &$form_state, $filter, $format, $defa
 
   $settings['sse_video_filter_width'] = array(
     '#type' => 'textfield',
-    '#title' => t('Default width setting'),
+    '#title' => t('默认视频宽度'),
     '#default_value' => isset($filter->settings['sse_video_filter_width']) ? $filter->settings['sse_video_filter_width'] : $defaults['sse_video_filter_width'],
     '#maxlength' => 4,
   );
   $settings['sse_video_filter_height'] = array(
     '#type' => 'textfield',
-    '#title' => t('Default height setting'),
+    '#title' => t('默认视频高度'),
     '#default_value' => isset($filter->settings['sse_video_filter_height']) ? $filter->settings['sse_video_filter_height'] : $defaults['sse_video_filter_height'],
     '#maxlength' => 4,
   );
@@ -42,9 +42,9 @@ function _sse_video_filter_tips($filter, $format, $long = FALSE) {
   if ($long) {
     return t('
       <p>插入视频：<code>[video:url]</code></p>
-      <p>基本用法：<code>[video:http://v.youku.com/v_show/id_XMTM0OTIyNzkyNA==.html?from=y1.7-1.2]</code></p>
-      <p>设置长宽：<code>[video:http://v.youku.com/v_show/id_XMTM0OTIyNzkyNA==.html?from=y1.7-1.2 width:800 height:600]</code></p>
-      <p>设置画面比：<code>[video:http://v.youku.com/v_show/id_XMTM0OTIyNzkyNA==.html?from=y1.7-1.2 width:800 height:600 ratio:4/3]</code></p>
+      <p>基本用法：<code>[video:http://v.youku.com/v_show/xxx.html]</code></p>
+      <p>设置长宽：<code>[video:http://v.youku.com/v_show/xxx.html width:800 height:600]</code></p>
+      <p>设置画面比：<code>[video:http://v.youku.com/v_show/xxx.html width:800 height:600 ratio:4/3]</code></p>
       ');
   }
   else {
